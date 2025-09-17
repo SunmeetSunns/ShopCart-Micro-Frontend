@@ -1,0 +1,19 @@
+.cursor-pointer{
+    cursor: pointer;
+}
+.nav-head{
+    color: white;
+    font-size: 2em;
+}
+ul>li{
+    color: #FFFFFF8C;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.profile{
+    color: white;
+    border: 1px solid white;
+    padding: 0.5em 1em;
+    margin-right: 2em;
+    border-radius: 1em;
+}

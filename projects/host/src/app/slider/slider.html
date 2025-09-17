@@ -1,0 +1,9 @@
+<div class="slide-main" [class.manual-mode]="isManualControl()" 
+     [style.transform]="isManualControl() ? 'translateX(' + (-currentIndex() * 18) + 'em)' : ''">
+
+    @for (item of images; track $index) {
+        <div class="slider" >
+            <img alt="Product Image" [src]="item">
+        </div>
+    }
+</div>

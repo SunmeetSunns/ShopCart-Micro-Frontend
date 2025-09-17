@@ -1,0 +1,23 @@
+
+<div class="d-flex justify-content-between aligh-items-center p-3 navbar bg-dark"  data-bs-theme="dark">
+  <h1 class="nav-head cursor-pointer'" [routerLink]="'/'" >ShopCart</h1>
+  <ul class="d-flex list-unstyled gap-3 m-0 cursor-pointer">
+    <li [routerLink]="'/'">Home</li>
+    <li [routerLink]="'/products'">Shop</li>
+    <li [routerLink]="'/about'">About Us</li>
+
+  </ul>
+
+  <div class="nav-item dropdown profile cursor-pointer">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Profile
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/cart">Cart</a></li>
+            <li><a class="dropdown-item" routerLink="/orders">My Orders</a></li>
+           
+          </ul>
+        </div>
+
+  
+</div>

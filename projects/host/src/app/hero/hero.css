@@ -1,0 +1,67 @@
+.hero {
+  margin-top: 0;
+  padding: 2em;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E1E1E1;
+  overflow-x: hidden; /* global overflow hidden */
+}
+
+.hero-slider-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* restrict slider container width */
+  gap: 1em;
+}
+
+app-slider {
+  flex: 0 0 80%; /* slider will take 80% width */
+}
+
+.btn-left,
+.btn-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 3em;
+  width: 3em;
+  z-index: 10;
+  border: none;
+  background-color: white;
+  color: #808080;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.btn-left {
+  left: -8.5em; /* adjust as needed */
+}
+
+.btn-right {
+  right: -8.5em; /* adjust as needed */
+}
+
+.hero-head {
+  font-size: 1.5em;
+  text-align: center;
+  color: #212529;
+  font-style: italic;
+  font-weight: 500;
+}
+.arr-svg{
+  height: 1.5em;
+  width: 1.5em;
+  z-index: 1000;
+}
+.shop-btn{
+  border: none;
+  border-radius: 2em;
+  color: white;
+  background-color: #212529;
+  padding: 0.5em 0.8em;
+}
