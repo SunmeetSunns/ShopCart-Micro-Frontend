@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { environment } from '../../environments/environment';
+import { EnvironmentDetectorService } from '../../../../shared/src/lib/environment-detector';
 
 @Component({
   selector: 'app-all-products',
@@ -9,7 +10,11 @@ import { environment } from '../../environments/environment';
   styleUrl: './all-products.css',
 })
 export class AllProducts {
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private envService: EnvironmentDetectorService
+  ) {}
   allProducts = [
     {
       id: 1,
@@ -85,8 +90,8 @@ export class AllProducts {
     setTimeout(() => {
       if (this.activeIndex === index) {
         this.activeIndex = null;
-        console.log(this.appUrl);
-        this.router.navigate(['/prod-desc'], { relativeTo: this.route });
+        const appBase = this.envService.getAppBase();
+        this.router.navigate([`${appBase}/prod-desc`], { relativeTo: this.route });
       }
     }, 1000);
   }

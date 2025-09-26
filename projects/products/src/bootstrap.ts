@@ -1,9 +1,9 @@
-// bootstrap.ts
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideRouter } from '@angular/router';
 import { App } from './app/app';
-import { routes } from './app/app.routes';
+import { appConfig } from './app/app.config';
+import { environment } from './environments/environment';
 
 bootstrapApplication(App, {
-  providers: [provideRouter(routes)],
-}).catch((err) => console.error(err));
+  ...appConfig,
+  providers: [...(appConfig.providers || []), { provide: 'ENV_CONFIG', useValue: environment }],
+});

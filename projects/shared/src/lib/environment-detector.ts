@@ -1,16 +1,20 @@
-// projects/shared/src/lib/environment-detector.service.ts
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({
+  providedIn: 'root',
+})
 export class EnvironmentDetectorService {
-  constructor() {}
+  constructor(@Inject('ENV_CONFIG') private env: any) {}
 
-  isRemote(): boolean {
-    // If window.IS_REMOTE is set by your host/remote config
-    return !!(window as any).IS_REMOTE;
+  getAppBase(): string {
+    return this.env.productBasePath;
   }
 
   isHost(): boolean {
-    return !this.isRemote();
+    return this.env.isHost === true;
+  }
+
+  isRemote(): boolean {
+    return this.env.isHost == false;
   }
 }
