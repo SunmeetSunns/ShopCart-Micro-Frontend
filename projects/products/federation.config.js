@@ -1,12 +1,10 @@
 const { withNativeFederation, shareAll } = require('@angular-architects/native-federation/config');
 
 module.exports = withNativeFederation({
-
   name: 'products',
 
   exposes: {
-    './Component': './projects/products/src/app/app.ts',
-    './Module':'./projects/products/src/app/app.routes.ts'
+    './Routes': './projects/products/src/app/app.routes.ts',
   },
 
   shared: {
@@ -28,7 +26,6 @@ module.exports = withNativeFederation({
     // New feature for more performance and avoiding
     // issues with node libs. Comment this out to
     // get the traditional behavior:
-    ignoreUnusedDeps: true
-  }
-  
+    ignoreUnusedDeps: true,
+  },
 });

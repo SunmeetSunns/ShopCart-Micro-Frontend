@@ -1,9 +1,17 @@
 import { Routes } from '@angular/router';
 import { loadRemoteModule } from '@angular-architects/native-federation';
 
-
 export const routes: Routes = [
-    { path: 'products', loadComponent: () => loadRemoteModule('products', './Component').then(m => m.App) },
-    { path: 'orders', loadComponent: () => loadRemoteModule('orders', './Component').then(m => m.App) },
-    { path: 'cart', loadComponent: () => loadRemoteModule('cart', './Component').then(m => m.App) }
+  {
+    path: 'products',
+    loadChildren: () => loadRemoteModule('products', './Routes').then((m) => m.routes),
+  },
+  {
+    path: 'orders',
+    loadChildren: () => loadRemoteModule('orders', './Routes').then((m) => m.routes),
+  },
+  {
+    path: 'cart',
+    loadChildren: () => loadRemoteModule('cart', './Routes').then((m) => m.routes),
+  },
 ];

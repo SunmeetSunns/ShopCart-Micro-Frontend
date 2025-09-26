@@ -61,7 +61,7 @@
     color: #05294d;
 }
 
-.product-details>p {
+.desc {
     font-size: 1em;
     color: #212529;
 }
@@ -102,7 +102,14 @@
 
 
 /* On hover: show heart, hide view button */
-.prod-wrapper:hover .animated-heart {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+.animated-heart.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+.price{
+    color: 212529;
+    font-size: 1.5em;
+}
+.prod-wrapper:hover .price{
+    color: green;
 }
