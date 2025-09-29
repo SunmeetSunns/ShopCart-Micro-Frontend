@@ -1,1 +1,19 @@
-<p>product-desc works!</p>
+<div>
+  <div class="product-img">
+    <div class="onClick-slider">
+      <lib-ngx-image-zoom
+        [thumbImage]="'http://localhost:4300/assets/prod1.jpg'"
+        [fullImage]="'http://localhost:4300/assets/prod1.jpg'"
+        [magnification]="2"
+        [enableScrollZoom]="true"
+        [enableLens]="true"
+        [lensWidth]="150"
+        [lensHeight]="150"
+        [circularLens]="true"
+      >
+      </lib-ngx-image-zoom>
+    </div>
+    <div>. . . .</div>
+  </div>
+  <div class="product-desc"></div>
+</div>

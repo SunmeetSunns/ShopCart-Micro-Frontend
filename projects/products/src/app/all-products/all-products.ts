@@ -82,17 +82,18 @@ export class AllProducts {
     },
   ];
   appUrl = environment.productBasePath;
-  addToCart(product: any) {}
   activeIndex: number | null = null;
 
-  playHeart(index: number) {
+  playHeart(index: number, product: any) {
     this.activeIndex = index;
     setTimeout(() => {
       if (this.activeIndex === index) {
-        this.activeIndex = null;
+        this.activeIndex = index;
         const appBase = this.envService.getAppBase();
-        this.router.navigate([`${appBase}/prod-desc`], { relativeTo: this.route });
+        this.router.navigate([`${appBase}/prod-desc`], {
+          queryParams: { prodId: this.activeIndex },
+        });
       }
-    }, 1000);
+    }, 1100);
   }
 }
