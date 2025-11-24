@@ -1,19 +1,28 @@
-<div>
-  <div class="product-img">
-    <div class="onClick-slider">
-      <lib-ngx-image-zoom
+<div class="d-flex flex-row justify-content-between main-prod">
+  <div class="prod-left d-flex flex-column justify-content-between">
+    <div class="prod-heading">Perfect Your Style, all the fashion you are looking for is here</div>
+    <div class="prod-descr">
+      {{ activeProduct?.description }}
+    </div>
+    <div class="buttons">
+      <button>Show Now</button>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="prod-right d-flex">
+    <div class="prod-img position-relative">
+      <div class="black-box position-absolute"></div>
+      <img src="http://localhost:4300/assets/prod1.jpg" />
+      <div class="black-border-box position-absolute"></div>
+    </div>
+  </div>
+</div>
+<!-- <lib-ngx-image-zoom
         [thumbImage]="'http://localhost:4300/assets/prod1.jpg'"
         [fullImage]="'http://localhost:4300/assets/prod1.jpg'"
         [magnification]="2"
         [enableScrollZoom]="true"
         [enableLens]="true"
-        [lensWidth]="150"
-        [lensHeight]="150"
         [circularLens]="true"
       >
-      </lib-ngx-image-zoom>
-    </div>
-    <div>. . . .</div>
-  </div>
-  <div class="product-desc"></div>
-</div>
+      </lib-ngx-image-zoom> -->

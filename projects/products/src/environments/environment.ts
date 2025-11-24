@@ -1,5 +1,6 @@
 export const environment = {
   production: false,
   isHost: false,
-  productBasePath: '', // empty because remote is lazy-loaded under host
+  productBasePath: '',
+  _WEBGATEWAY_BASIC_URL_: 'http://localhost:3000/',
 };

@@ -7,10 +7,10 @@
         class="d-flex flex-row prod-card col-lg-12 col-md-6 col-sm-12 position-relative prod-wrapper"
         (click)="playHeart(i, product)"
       >
-        <img [src]="product.imgUrl" alt="Product image" class="prod-img col-lg-6" />
+        <img [src]="product.prodImg" alt="Product image" class="prod-img col-lg-6" />
         <div class="product-details col-lg-6">
           <h2>{{ product.title }}</h2>
-          <p class="desc">{{ product.description }}</p>
+          <p class="desc">{{ product?.prodDesc }}</p>
           <p class="price">{{ product.price }}</p>
           <button (click)="playHeart(i, product)" class="view-btn">
             <img src="http://localhost:4300/assets/svg/right-circle-arr.svg" />
